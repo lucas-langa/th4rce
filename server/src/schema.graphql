@@ -1,0 +1,11 @@
+type Query {
+    allPeople(count: Int, next: Int): [Person]
+    person(name:String): Person
+}
+
+type Person {
+    name: String
+    height: Int
+    gender: String
+    homeworld: String
+}

@@ -1,0 +1,38 @@
+{
+  "name": "th4rce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npm-start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-langa/th4rce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-langa/th4rce/issues"
+  },
+  "homepage": "https://github.com/lucas-langa/th4rce#readme",
+  "dependencies": {
+    "@graphql-codegen/cli": "^1.21.4",
+    "apollo-datasource-rest": "^0.13.0",
+    "apollo-server": "^2.24.1",
+    "fetch": "^1.1.0",
+    "graphql": "^15.5.0",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-resolvers": "1.19.1",
+    "nodemon": "^2.0.7"
+  }
+}

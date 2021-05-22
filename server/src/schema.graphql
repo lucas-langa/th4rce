@@ -1,11 +1,12 @@
 type Query {
-    allPeople(count: Int, next: Int): [Person]
+    allPeople(page:Int): [Person]
     person(name:String): Person
 }
 
 type Person {
     name: String
-    height: Int
+    height: String
+    mass: String
     gender: String
     homeworld: String
 }

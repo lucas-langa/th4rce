@@ -26,9 +26,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "cypress:open": "cypress open",
+
     "start-client": "react-scripts start",
-    "start": "cd server && npm start",
+    "start": "serve -s build && cd server && npm start",
     "build": "react-scripts build && (cd server && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,7 +52,6 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^7.3.0"
   },
   "engines": {
     "node": "14.15.5"

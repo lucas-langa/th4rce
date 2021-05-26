@@ -15,7 +15,8 @@ const server = new ApolloServer({
     resolvers,
     dataSources: () => ({
         ForceAPI: new ForceAPI()
-    })
+    }),
+    playground: false
 });
 
 server.listen().then(()=>{

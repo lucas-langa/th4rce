@@ -1,6 +1,4 @@
 import React from 'react';
-import People from './features/people/People.jsx';
-import Nav from './features/Nav';
 import Main from './features/people/Main'
 
 function App() {

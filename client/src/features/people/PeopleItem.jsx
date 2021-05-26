@@ -13,7 +13,7 @@ const listStyle = {
     listStyleType: "none",
 }
 
-function PeopleItem(props:PeopleProp) {
+function PeopleItem(props) {
     const id = props.name
     const peopleItem = useSelector((state) => getPeopleById(state,id))
     const { name } = peopleItem;

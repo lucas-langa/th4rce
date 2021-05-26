@@ -12,7 +12,7 @@ function Person(props) {
         return (<p>Loading....</p>)
     return (
         <div className="card" style={{width:400}}>
-            <img className="card-img-top" src="./starwars.png"/>
+            <img className="card-img-top" alt="would be star wars character if i were good at redux" src="./starwars.png"/>
             <div className="card-body">
                 <h4 className="card-title">{yours.name}</h4>
                 <p className="card-text">{yours.height}</p>

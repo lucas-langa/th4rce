@@ -28,7 +28,7 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app });
 
-app.listen({ port: 4000 },()=>{
+app.listen({ port: process.env.PORT || 4000 },()=>{
     console.log(`Accepting connections at ${server.graphqlPath}`);
 })
 // server.listen({ port: process.env.PORT || 4000 }).then(({url})=>{

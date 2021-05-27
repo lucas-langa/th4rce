@@ -8,10 +8,11 @@ const resolvers = {
 };
 const express = require('express');
 const app = express();
-
-app.get('*', (_req, res) => {
-    res.sendFile(path.resolve(__dirname, '..','..','build','index.html'))
-});
+const buildPath = path.join(__dirname,'..','..','build');
+app.use(express.static(buildPath))
+// app.get('/', (_req, res) => {
+//     res.sendFile(path.resolve(__dirname, '..','..','build','index.html'))
+// });
 
 const server = new ApolloServer({
     typeDefs: fs.readFileSync(

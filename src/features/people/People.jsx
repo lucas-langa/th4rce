@@ -17,6 +17,12 @@ function People() {
         dispatch(fetchPeople(pageNumber));
         setCurrentPage(pageNumber);
     }
+    if (!people)
+        return (
+            <div>
+                <p>Loading...</p>
+            </div>
+        )
     return (
         <div className="container">
             <ul>

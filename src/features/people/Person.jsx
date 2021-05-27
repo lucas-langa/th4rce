@@ -17,7 +17,6 @@ function Person(props) {
             <div className="card-body">
                 <h4 className="card-title">Name: {yours.name}</h4>
                 <p className="card-text">Height: {yours.height}</p>
-                <p className="card-text">Weight: {yours.weight}</p>
                 <p className="card-text">Homeworld: {yours.homeworld}</p>
                 <p className="card-text">Gender: {yours.gender}</p>
                 <p className="card-text">Mass: {yours.mass}</p>

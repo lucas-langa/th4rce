@@ -17,7 +17,7 @@ function People() {
         dispatch(fetchPeople(pageNumber));
         setCurrentPage(pageNumber);
     }
-    if (!people)
+    if (!renderedListItems)
         return (
             <div>
                 <p>Loading...</p>

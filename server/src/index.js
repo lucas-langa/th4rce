@@ -1,4 +1,4 @@
-const { ApolloServer } = require('apollo-server');
+const { ApolloServer } = require('apollo-server-express');
 const fs = require('fs');
 const path = require('path');
 const ForceAPI = require('./datasources/ForceAPI');
@@ -6,6 +6,12 @@ const Query = require('./resolvers/Query');
 const resolvers = {
     Query,
 };
+const express = require('express');
+const app = express();
+
+app.get('*', (_req, res) => {
+    res.sendFile(path.resolve(__dirname, '..','..','build','index.html'))
+});
 
 const server = new ApolloServer({
     typeDefs: fs.readFileSync(
@@ -19,6 +25,11 @@ const server = new ApolloServer({
     playground: false
 });
 
-server.listen({ port: process.env.PORT || 4000 }).then(({url})=>{
-    console.log(`server is running!, listening on port ${url}`,);
-});
+server.applyMiddleware({ app });
+
+app.listen({ port: 4000 },()=>{
+    console.log(`Accepting connections at ${server.graphqlPath}`);
+})
+// server.listen({ port: process.env.PORT || 4000 }).then(({url})=>{
+//     console.log(`server is running!, listening on port ${url}`,);
+// });

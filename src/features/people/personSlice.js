@@ -31,7 +31,13 @@ const personSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        [fetchPerson.fulfilled]: personAdapter.setAll
+        [fetchPerson.pending]: (state, action) => {
+            state.status = 'loading';
+        },
+        [fetchPerson.fulfilled]: (state, action) => {
+            state.status='idle';
+            personAdapter.setAll(state, action.payload);
+        }
     }
 });
 

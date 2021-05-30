@@ -23,8 +23,7 @@ const fetchPeople =  createAsyncThunk('people/fetchPeople', async (page = 1) => 
                 }
             }`
         })   
-        return response.data.allPeople
-    
+        return response.data.allPeople;
 });        
 
 
@@ -33,7 +32,13 @@ const peopleSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        [fetchPeople.fulfilled]: peopleAdapter.setAll
+        [fetchPeople.pending]: (state,action)=>{
+            state.status = 'loading' 
+        },
+        [fetchPeople.fulfilled]:(state, action) =>{
+            state.status = 'idle' 
+            peopleAdapter.setAll(state, action.payload)  
+        } 
     }
 });
 

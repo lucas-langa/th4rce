@@ -24,6 +24,7 @@
     "apollo-datasource-rest": "^0.13.0",
     "apollo-server": "^2.24.1",
     "apollo-server-express": "^2.24.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "fetch": "^1.1.0",
     "graphql": "^15.5.0",
